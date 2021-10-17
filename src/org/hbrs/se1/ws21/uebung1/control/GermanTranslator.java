@@ -7,10 +7,18 @@ public class GermanTranslator implements Translator {
 	/**
 	 * Methode zur Übersetzung einer Zahl in eine String-Repraesentation
 	 */
+	//2-)
 	public String translateNumber( int number ) {
 		// [ihr Source Code aus Übung 1-2]
+		try {
 
-		return null;
+			String [] zahlen = {"Eins", "Zwei", "Drei", "Vier", "Fünf", "Sechs", "Sieben", "Acht", "Neun", "Zehn"};
+
+			return zahlen[number - 1];
+		}
+		catch (IndexOutOfBoundsException e){
+			return "Übersetzung der ["+number+"] nicht möglich ("+ Translator.version+")";
+		}
 	}
 		
 	/**
